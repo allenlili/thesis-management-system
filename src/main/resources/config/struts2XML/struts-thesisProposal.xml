@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+   <!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+	
+<struts>
+	<package name="thesisProposal" namespace="/main" extends="gtms">
+		<action name="thesisProposal" class="thesisProposalAction">
+			<result name="myThesisProposal">/WEB-INF/jsp/student/student-thesisProposal/student-thesisProposal.jsp</result>
+		    <result name="toAddThesisProposal">/WEB-INF/jsp/student/student-thesisProposal/student-thesisProposal-add.jsp</result>
+		    <result name="watch">/WEB-INF/jsp/student/student-thesisProposal/student-thesisProposal-watch.jsp</result>
+		    <result name="update">/WEB-INF/jsp/student/student-thesisProposal/student-thesisProposal-update.jsp</result>			
+			<result name="listAction" type="redirect">/main/thesisProposal!selectMyThesisProposal.action</result>
+			<result name="listTask" type="redirect">/process/myTask!findPage.action</result>
+		    <result name="watch">/WEB-INF/jsp/student/student-thesisProposal/student-thesisProposal-watch.jsp</result>
+			<result name="toMyStudentThesisProposal">/WEB-INF/jsp/admin/teacher-thesisProposal/teacher-thesisProposal.jsp</result>
+			<result name="watchMyStudent">/WEB-INF/jsp/admin/teacher-thesisProposal/teacher-thesisProposal-watch.jsp</result>
+		</action>
+	</package>
+		
+</struts>    

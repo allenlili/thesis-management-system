@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+   <!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+	
+<struts>
+	<package name="topic" namespace="/main" extends="gtms">
+		<action name="topic" class="topicAction">
+			<result name="add">/WEB-INF/jsp/admin/teacher-topic/add.jsp</result>
+			<result name="update">/WEB-INF/jsp/admin/teacher-topic/update.jsp</result>
+			<result name="list">/WEB-INF/jsp/admin/teacher-topic/list.jsp</result>
+			<result name="listAction" type="redirect">/main/topic!findPage.action?status=${@com.zhbit.core.utils.EnumStatus.StatusEnum@unstart.value}</result>
+			<result name="listTask" type="redirect">/process/task!findPage.action</result>
+		</action>
+		<action name="topicStarted" class="topicAction">
+		    <result name="listAction" type="redirect">/main/topicStarted!findPage.action?status=${@com.zhbit.core.utils.EnumStatus.StatusEnum@start.value}</result>
+			<result name="list">/WEB-INF/jsp/admin/teacher-topic/listStarted.jsp</result>
+		</action>
+		<action name="topicFinished" class="topicAction">
+		    <result name="listAction" type="redirect">/main/topicFinished!findPage.action?status=${@com.zhbit.core.utils.EnumStatus.StatusEnum@finished.value}</result>
+			<result name="list">/WEB-INF/jsp/admin/teacher-topic/listFinished.jsp</result>
+			<result name="watch">/WEB-INF/jsp/admin/teacher-topic/watch.jsp</result>
+		</action>
+		<action name="myTopic" class="topicAction">
+			<result name="selectTopic">/WEB-INF/jsp/student/student-topic/student-topic.jsp</result>
+			<result name="toMyTopic" type="redirect">/main/myTopic!selectMyTopic.action</result>
+			<result name="myTopic">/WEB-INF/jsp/student/student-topic/student-mytopic.jsp</result>
+		</action>
+		<action name="equal" class="topicAction" method="equal">
+	  		<result name="success" type="json">
+	  			<param name="root">result</param>
+	  		</result>			
+		</action>
+	</package>
+		
+</struts>    

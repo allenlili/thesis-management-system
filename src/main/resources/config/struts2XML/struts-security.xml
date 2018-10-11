@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+   <!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+	
+<struts>
+	<package name="security" namespace="/security" extends="gtms">
+		<action name="user" class="userAction">
+			<result name="add">/WEB-INF/jsp/admin/security/user/add.jsp</result>
+			<result name="update">/WEB-INF/jsp/admin/security/user/update.jsp</result>
+			<result name="list">/WEB-INF/jsp/admin/security/user/list.jsp</result>
+			<result name="listAction" type="redirect">/security/user!findPage.action</result>
+			<result name="updateAction" type="redirect">/security/user!toUpdate.action?id=${id}</result>
+			<result name="teacher_index" type="redirect">/admin-index.jsp</result>
+			<result name="student_index" type="redirect">/student-index.jsp</result>
+			<result name="login" type="redirect">/login.jsp</result>
+		</action>
+		<action name="role" class="roleAction">
+			<result name="add">/WEB-INF/jsp/admin/security/role/add.jsp</result>
+			<result name="update">/WEB-INF/jsp/admin/security/role/update.jsp</result>
+			<result name="list">/WEB-INF/jsp/admin/security/role/list.jsp</result>
+			<result name="listAction" type="redirect">/security/role!findPage.action</result>
+			<result name="updateAction" type="redirect">/security/role!toUpdate.action?id=${id}</result>
+		</action>
+		<action name="resource" class="resourceAction">
+			<result name="add">/WEB-INF/jsp/admin/security/resource/add.jsp</result>
+			<result name="update">/WEB-INF/jsp/admin/security/resource/update.jsp</result>
+			<result name="list">/WEB-INF/jsp/admin/security/resource/list.jsp</result>
+			<result name="listAction" type="redirect">/security/resource!findPage.action</result>
+			<result name="updateAction" type="redirect">/security/resource!toUpdate.action?id=${id}</result>
+		</action>
+	
+		<action name="institute" class="instituteAction">
+			<result name="add">/WEB-INF/jsp/admin/security/institute/add.jsp</result>
+			<result name="update">/WEB-INF/jsp/admin/security/institute/update.jsp</result>
+			<result name="list">/WEB-INF/jsp/admin/security/institute/list.jsp</result>
+			<result name="listAction" type="redirect">/security/institute!findPage.action</result>
+		</action>
+		
+		<action name="major" class="majorAction">
+			<result name="add">/WEB-INF/jsp/admin/security/major/add.jsp</result>
+			<result name="update">/WEB-INF/jsp/admin/security/major/update.jsp</result>
+			<result name="list">/WEB-INF/jsp/admin/security/major/list.jsp</result>
+			<result name="listAction" type="redirect">/security/major!findPage.action</result>
+		</action>
+		
+		<action name="student" class="studentAction">
+			<result name="add">/WEB-INF/jsp/admin/security/student/add.jsp</result>
+			<result name="update">/WEB-INF/jsp/admin/security/student/update.jsp</result>
+			<result name="list">/WEB-INF/jsp/admin/security/student/list.jsp</result>
+			<result name="listAction" type="redirect">/security/student!findPage.action?</result>
+			<result name="updateAction" type="redirect">/security/student!toUpdate.action?id=${id}</result>
+		</action>
+		
+		<action name="teacher" class="teacherAction">
+			<result name="add">/WEB-INF/jsp/admin/security/teacher/add.jsp</result>
+			<result name="update">/WEB-INF/jsp/admin/security/teacher/update.jsp</result>
+			<result name="list">/WEB-INF/jsp/admin/security/teacher/list.jsp</result>
+			<result name="listAction" type="redirect">/security/teacher!findPage.action?</result>
+			<result name="updateAction" type="redirect">/security/teacher!toUpdate.action?id=${id}</result>
+		</action>
+		
+        <action name="securityCodeImage" class="securityCodeImageAction" method="execute">
+            <result name="success" type="stream">
+              <param name="contentType">image/jpeg</param>
+              <param name="inputName">imageStream</param>
+              <param name="bufferSize">2048</param>
+            </result>
+        </action>		
+	</package>
+		
+</struts>    

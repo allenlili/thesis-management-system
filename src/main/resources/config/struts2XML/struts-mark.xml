@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+   <!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+	
+<struts>
+	<package name="mark" namespace="/main" extends="gtms">
+		<action name="mark" class="markAction">
+			<result name="toMyMark">/WEB-INF/jsp/student/student-thesisGrade/student-mark-list.jsp</result>
+			<result name="toMyStudent">/WEB-INF/jsp/admin/teacher-mark/teacher-mark-list.jsp</result>
+			<result name="listAction" type="redirect">/main/mark!findMyStudents.action</result>
+		</action>
+	</package>
+</struts>    

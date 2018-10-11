@@ -1,0 +1,34 @@
+/*
+ * 页头部分的样式
+ */
+#logo, #welcomeUser {
+	padding: 7px 0;
+}
+/* 
+ * 导航菜单的样式
+ */
+
+
+#navigation {
+	border-bottom: 1px solid #00CC99;
+}
+/*
+ * 页脚部分的样式
+ */
+#bottom {
+	background: #009571 url(../images/student/emerald.png);
+	color: #fff;
+	text-shadow: 1px 1px 1px #048465;
+}
+.semicircle {
+	background: url(../images/student/semicircle.png) repeat-x;
+	padding: 10px 0;
+}
+#footer {
+	background: url(../images/student/emerald.png) repeat-x #097a5f;
+	padding: 10px 0 20px 0;
+	color: #000000;
+	text-shadow: 1px 1px 1px #009571;
+}
+
+

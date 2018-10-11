@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+   <!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+	
+<struts>
+	<package name="thesisScript" namespace="/main" extends="gtms">
+		<action name="thesisScript" class="thesisScriptAction">
+			<result name="list">/WEB-INF/jsp/student/student-thesisScript/student-thesisScript-list.jsp</result>
+		    <result name="add">/WEB-INF/jsp/student/student-thesisScript/student-thesisScript-add.jsp</result>
+		    <result name="update">/WEB-INF/jsp/student/student-thesisScript/student-thesisScript-update.jsp</result>
+		    <result name="watch">/WEB-INF/jsp/student/student-thesisScript/student-thesisScript-watch.jsp</result>
+			<result name="listAction" type="redirect">/main/thesisScript!findPage.action</result>
+			<result name="listTask" type="redirect">/process/task!findPage.action</result>
+		</action>
+		<action name="myStudentScript" class="thesisScriptAction">
+			<result name="toMyStudent">/WEB-INF/jsp/admin/teacher-thesisScript/teacher-thesisScript-list.jsp</result>
+			<result name="toMyStudentScript">/WEB-INF/jsp/admin/teacher-thesisScript/teacher-thesisScript-sublist.jsp</result>
+			<result name="toMyStudentScriptDetails">/WEB-INF/jsp/admin/teacher-thesisScript/teacher-thesisScript-watch.jsp</result>
+		</action>
+	    <action name="download" class="thesisScriptAction" method="download">
+	      <result name="download" type="stream">
+	    	<param name="contentType">application</param>
+	    	<param name="inputName">targetFile</param>
+	    	<param name="contentDisposition">attachment;filename=${scriptFileName}</param>
+	    	<param name="bufferSize">4096</param>
+	      </result>
+	    </action>		
+	</package>
+</struts>    

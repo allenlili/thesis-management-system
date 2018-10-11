@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+   <!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+	
+<struts>
+	<package name="me" namespace="/me" extends="gtms">	
+
+		<action name="me" class="meAction">
+			<result name="toStuInfoUpdate">/WEB-INF/jsp/student/student-info/student-myinfo.jsp</result>
+			<result name="toStuUserUpdate">/WEB-INF/jsp/student/student-info/student-userinfo.jsp</result>
+			<result name="toStuInfoUpdatePage" type="redirect">/me/me!toUpdateStuInfo.action</result>
+			<result name="toStuUserUpdatePage" type="redirect">/me/me!toModifyStuUserInfo.action</result>
+			
+			<result name="toTeaInfoUpdate">/WEB-INF/jsp/admin/teacher-info/teacher-myinfo.jsp</result>
+			<result name="toTeaUserUpdate">/WEB-INF/jsp/admin/teacher-info/teacher-userinfo.jsp</result>
+			<result name="toTeaInfoUpdatePage" type="redirect">/me/me!toUpdateTeaInfo.action</result>
+			<result name="toTeaUserUpdatePage" type="redirect">/me/me!toModifyTeaUserInfo.action</result>
+		</action>		
+	</package>
+		
+</struts>    

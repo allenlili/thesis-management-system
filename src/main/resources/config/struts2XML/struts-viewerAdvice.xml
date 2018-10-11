@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+   <!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+	
+<struts>
+	<package name="viewerAdvice" namespace="/main" extends="gtms">
+		<action name="viewerAdvice" class="viewerAdviceAction">
+			<result name="toMyStudent">/WEB-INF/jsp/admin/teacher-viewerAdvice/teacher-viewerAdvice-list.jsp</result>
+			<result name="add">/WEB-INF/jsp/admin/teacher-viewerAdvice/teacher-viewerAdvice-add.jsp</result>
+			<result name="update">/WEB-INF/jsp/admin/teacher-viewerAdvice/teacher-viewerAdvice-update.jsp</result>
+			<result name="listAction" type="redirect">/main/viewerAdvice!findMyStudents.action</result>
+			<result name="watch">/WEB-INF/jsp/admin/teacher-viewerAdvice/teacher-viewerAdvice-watch.jsp</result>
+		</action>
+	</package>
+</struts>    

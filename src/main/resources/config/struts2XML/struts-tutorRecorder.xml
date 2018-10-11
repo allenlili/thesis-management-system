@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+   <!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+	
+<struts>
+	<package name="tutorRecorder" namespace="/main" extends="gtms">
+		<action name="tutorRecorder" class="tutorRecorderAction">
+			<result name="list">/WEB-INF/jsp/admin/teacher-tutorRecorder/teacher-tutorRecorder-list.jsp</result>
+			<result name="toTutorRecorder">/WEB-INF/jsp/admin/teacher-tutorRecorder/teacher-tutorRecorder-sublist.jsp</result>
+		</action>
+	</package>
+		
+</struts>    

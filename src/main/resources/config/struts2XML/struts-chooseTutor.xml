@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+   <!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+	
+<struts>
+	<package name="chooseTutor" namespace="/chooseTutor" extends="gtms">	
+		<action name="student" class="chooseTutorAction">
+			<result name="student-chooseTutor">/WEB-INF/jsp/student/student-chooseTutor/student-chooseTutor.jsp</result>
+			<result name="student-myTutor">/WEB-INF/jsp/student/student-chooseTutor/student-myTutor.jsp</result>
+			<result name="haveForwardMatch" type="redirect">/chooseTutor/student!findPossibleTeachers.action</result>
+		</action>
+		<action name="teacher" class="chooseTutorAction">
+			<result name="teacher-chooseTutor-firstRun">/WEB-INF/jsp/admin/teacher-chooseStudent/teacher-chooseStudent-firstRun.jsp</result>
+			<result name="teacher-chooseTutor-secondRun">/WEB-INF/jsp/admin/teacher-chooseStudent/teacher-chooseStudent-secondRun.jsp</result>
+			<result name="teacher-chooseTutor-thirdRun">/WEB-INF/jsp/admin/teacher-chooseStudent/teacher-chooseStudent-thirdRun.jsp</result>
+			<result name="listAction" type="redirect">/chooseTutor/teacher!findUnselectedStudents.action</result>
+			<result name="haveForwardEachRunMatch" type="redirect">/chooseTutor/teacher!findUnselectedStudents.action</result>
+			<result name="teacher-chooseTutor-finished">/WEB-INF/jsp/admin/teacher-chooseStudent/teacher-chooseStudent-finished.jsp</result>
+		</action>				
+	</package>
+		
+</struts>    

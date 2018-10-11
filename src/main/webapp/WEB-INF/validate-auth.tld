@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<taglib xmlns="http://java.sun.com/xml/ns/javaee"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-jsptaglibrary_2_1.xsd"
+    version="2.1">
+    
+  <description>validate auth</description>
+  <display-name>validate auth</display-name>
+  <tlib-version>1.1</tlib-version>
+  <short-name>v</short-name>
+  <uri>http://www.allen.com/auth</uri>
+
+  <tag>
+    <name>auth</name>
+    <tag-class>com.zhbit.security.taglib.ValidateAuth</tag-class>
+    <attribute>
+    	<name>path</name>
+    	<required>true</required>
+    </attribute>
+  </tag>
+  
+</taglib>  

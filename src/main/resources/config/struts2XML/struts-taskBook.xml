@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+   <!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+	
+<struts>
+	<package name="taskBook" namespace="/main" extends="gtms">
+		<action name="taskBook" class="taskBookAction">
+			<result name="add">/WEB-INF/jsp/admin/teacher-taskBook/add.jsp</result>
+			<result name="update">/WEB-INF/jsp/admin/teacher-taskBook/update.jsp</result>
+			<result name="list">/WEB-INF/jsp/admin/teacher-taskBook/list.jsp</result>
+			<result name="listAction" type="redirect">/main/taskBook!findPage.action?status=${@com.zhbit.core.utils.EnumStatus.StatusEnum@unstart.value}</result>
+			<result name="listTask" type="redirect">/process/task!findPage.action</result>
+		</action>
+		<action name="taskBookStarted" class="taskBookAction" >
+		    <result name="listAction" type="redirect">/main/taskBook!findPage.action?status=${@com.zhbit.core.utils.EnumStatus.StatusEnum@start.value}</result>
+			<result name="list">/WEB-INF/jsp/admin/teacher-taskBook/listStarted.jsp</result>
+		</action>
+		<action name="taskBookFinished" class="taskBookAction">
+		    <result name="listAction" type="redirect">/main/taskBook!findPage.action?status=${@com.zhbit.core.utils.EnumStatus.StatusEnum@finished.value}</result>
+			<result name="list">/WEB-INF/jsp/admin/teacher-taskBook/listFinished.jsp</result>
+			<result name="watch">/WEB-INF/jsp/admin/teacher-taskBook/watch.jsp</result>
+		</action>
+		<action name="myTaskBook" class="taskBookAction" method="selectMyTaskBook">
+			<result name="myTaskBook">/WEB-INF/jsp/student/student-taskBook/student-taskBook.jsp</result>
+		</action>
+	</package>
+		
+</struts>    

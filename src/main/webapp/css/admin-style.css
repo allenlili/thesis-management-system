@@ -1,0 +1,48 @@
+/*
+ 分页样式表
+*/
+
+#page {
+	height: 30px;
+	float: right;
+	margin-top: 5px;
+	text-align: right;
+}
+
+/*
+添加、删除、查询按钮
+*/
+#execute {
+	float:left;
+	height: 30px;
+	margin-top: 5px;	
+	margin-top: 10px\9;
+	text-align: left;
+}
+
+/*
+输入组间距
+*/
+#input {
+	margin:10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

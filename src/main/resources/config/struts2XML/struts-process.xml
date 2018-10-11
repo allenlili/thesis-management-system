@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+   <!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+	
+<struts>
+	<package name="process" namespace="/process" extends="gtms">
+		<action name="definition" class="processDefinitionAction">
+			<result name="list">/WEB-INF/jsp/admin/process/definition/list.jsp</result>
+			<result name="deploy">/WEB-INF/jsp/admin/process/definition/deploy.jsp</result>
+			<result name="listAction" type="redirect">/process/definition!findPage.action</result>
+		</action>
+		<action name="instance" class="processInstanceAction">
+			<result name="list">/WEB-INF/jsp/admin/process/instance/list.jsp</result>
+			<result name="watch">/WEB-INF/jsp/admin/process/instance/watch.jsp</result>
+			<result name="listAction" type="redirect">/process/instance!findPage.action</result>
+		</action>
+		<action name="task" class="processTaskAction">
+			<result name="list">/WEB-INF/jsp/admin/process/task/list.jsp</result>
+			<result name="listAction" type="redirect">/process/task!findPage.action</result>
+		</action>
+		<action name="history" class="processHistoryAction">
+			<result name="list">/WEB-INF/jsp/admin/process/history/list.jsp</result>
+			<result name="listAction" type="redirect">/process/history!findPage.action</result>
+		</action>
+		<action name="myTask" class="processTaskAction">
+			<result name="list">/WEB-INF/jsp/student/student-task/list.jsp</result>
+			<result name="listAction" type="redirect">/process/myTask!findPage.action</result>
+		</action>
+<!-- 		<action name="myThesisScriptTask" class="processTaskAction"> -->
+<!-- 			<result name="list">/WEB-INF/jsp/student/student-thesisScript/student-thesisScript-task.jsp</result> -->
+<!-- 			<result name="listAction" type="redirect">/process/myThesisScriptTask!findPage.action</result> -->
+<!-- 		</action>		 -->
+		<action name="myInstance" class="processInstanceAction">
+			<result name="watch">/WEB-INF/jsp/student/student-thesisProposal/watch.jsp</result>
+		</action>
+		<action name="myInstanceForThesisScript" class="processInstanceAction">
+			<result name="watch">/WEB-INF/jsp/student/student-thesisScript/watch.jsp</result>
+		</action>				
+	</package>
+		
+</struts>    

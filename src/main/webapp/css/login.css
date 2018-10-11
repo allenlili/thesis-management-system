@@ -1,0 +1,13 @@
+/*----------------------------------------------------------------------------------- */
+/*  Login */
+/*----------------------------------------------------------------------------------- */
+
+body.login .login-container {	
+	background-color: #FFFFFF;
+	border-radius: 50px;
+	padding: 30px;
+	margin: 10% 10% 20% 20%;
+	width: 360px;
+	height: 380px;
+	text-align: center;
+}

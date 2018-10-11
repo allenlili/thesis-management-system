@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+   <!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+	
+<struts>
+	<package name="manageMajor" namespace="/manageMajor" extends="gtms">
+		<action name="student" class="studentAction">
+			<result name="add">/WEB-INF/jsp/admin/teacher-manageMajor/student-add.jsp</result>
+			<result name="update">/WEB-INF/jsp/admin/teacher-manageMajor/student-update.jsp</result>
+			<result name="list">/WEB-INF/jsp/admin/teacher-manageMajor/student-list.jsp</result>
+			<result name="listAction" type="redirect">/teacher-manageMajor/student!findPage.action?</result>
+			<result name="updateAction" type="redirect">/teacher-manageMajor/student!toUpdate.action?id=${id}</result>
+		</action>
+		
+		<action name="teacher" class="teacherAction">
+			<result name="add">/WEB-INF/jsp/admin/teacher-manageMajor/teacher-add.jsp</result>
+			<result name="update">/WEB-INF/jsp/admin/teacher-manageMajor/teacher-update.jsp</result>
+			<result name="list">/WEB-INF/jsp/admin/teacher-manageMajor/teacher-list.jsp</result>
+			<result name="listAction" type="redirect">/manageMajor/teacher!findPage.action?</result>
+			<result name="updateAction" type="redirect">/manageMajor/teacher!toUpdate.action?id=${id}</result>
+		</action>
+		
+	</package>
+</struts>    
