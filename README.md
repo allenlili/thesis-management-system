@@ -4,7 +4,7 @@ Graduation Thesis Management System (GTMS) is based on the thesis regulation of 
 
 ## Get started
 
-### Prerequisite
+### Prerequisites
 
 1. setting up Maven environment
 2. JDK7+
@@ -25,3 +25,12 @@ The system is based on B/S. More importantly, it is suitable for various device 
 ![example](example.png)
 
 Key words: workflow engine, flexible system  
+
+## Authors
+
+* **Allen Li**
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
+
